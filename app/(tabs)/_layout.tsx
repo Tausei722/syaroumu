@@ -1,9 +1,11 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useThemeStore } from "../../store/theme";
+import { usePushNotification } from "../../hooks/usePushNotification";
 
 export default function TabLayout() {
   const primary = useThemeStore((s) => s.primaryColor);
+  usePushNotification();
 
   return (
     <Tabs
